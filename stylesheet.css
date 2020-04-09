@@ -1,0 +1,82 @@
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-size: 3em;
+	color: purple;
+}
+
+.heart {
+	position: absolute;
+	margin: auto;
+	top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+	background-color: pink;
+	height: 100px;
+	width: 100px;
+	transform: rotate(-45deg);
+}
+
+.heart::before, .heart::after {
+	content: "";
+	background-color: pink;
+	border-radius: 50%;
+	position: absolute;
+	height: 100px;
+	width: 100px;
+}
+
+.heart::before {
+	top: -50px;
+	left: 0px;
+}
+
+.heart::after {
+	top: 0px;
+	right: -50px;
+}
+
+h1:hover {
+	animation: rotate 0.1s infinite;
+	color: pink;
+}
+
+.heart:hover, .heart:hover::before, .heart:hover::after {
+	background-color: purple;	
+}
+
+.heart:hover {
+	animation: heartbeat 0.7s infinite;
+}
+
+
+@keyframes rotate {
+	0% {
+		transform: scale(0.99) rotate(-0.3deg);
+	}
+	
+	50% {
+		transform: scale(1) rotate(0.3deg)
+	}
+	
+	100% {
+		transform: scale(0.99) rotate(-0.3deg);
+	}
+}
+
+@keyframes heartbeat {
+	0% {
+		transform: scale(1) rotate(-45deg);    
+	}
+
+	25% {
+		transform: scale(1.25) rotate(-45deg);    
+	}
+
+	35% {
+		transform: scale(1) rotate(-45deg);    
+	}
+}
+
+
