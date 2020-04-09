@@ -9,9 +9,9 @@ h1 {
 	position: absolute;
 	margin: auto;
 	top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+   	right: 0;
+    	bottom: 0;
+    	left: 0;
 	background-color: pink;
 	height: 100px;
 	width: 100px;
@@ -29,11 +29,11 @@ h1 {
 
 .heart::before {
 	top: -50px;
-	left: 0px;
+	left: 0;
 }
 
 .heart::after {
-	top: 0px;
+	top: 0;
 	right: -50px;
 }
 
